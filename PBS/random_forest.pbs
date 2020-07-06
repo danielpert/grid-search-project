@@ -1,0 +1,15 @@
+#!/bin/sh -l
+#PBS -j oe
+#PBS -N random_forest
+#PBS -l nodes=1:ppn=16
+#PBS -l walltime=96:00:00
+#PBS -q low
+#PBS -M dpert@umich.edu
+#PBS -m abe
+#PBS -o /home/danielpert/grid-search-project/PBS/random_forest_output.txt
+#PBS -e /home/danielpert/grid-search-project/PBS/random_forest_error.txt
+
+cd /home/danielpert/grid-search-project
+# Loading the software you need
+# Run the command, either python code or simulation
+python training.py run -o random_forest

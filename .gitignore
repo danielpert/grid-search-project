@@ -1,0 +1,9 @@
+# ignore .png files
+*.png
+# ignore signac.rc file and workspace directory, which can be created by executing init.py
+signac.rc
+workspace/
+# ignore view directory, which can be created with `$ signac view` in bash or create_linked_view() method in python
+view/
+# ignore trained models
+trained-models/*
